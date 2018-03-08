@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    init.goodix.sh \
     init.xiaomi.series.rc
 
 # Sensors
