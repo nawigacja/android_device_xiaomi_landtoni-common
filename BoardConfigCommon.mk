@@ -11,6 +11,7 @@ DEVICE_COMMON_PATH := device/xiaomi/landtoni-common
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_COMMON_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_COMMON_PATH)/biometrics/sepolicy
 
 # Inherit from the proprietary version
 include vendor/xiaomi/landtoni-common/BoardConfigVendor.mk
