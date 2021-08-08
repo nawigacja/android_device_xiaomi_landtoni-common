@@ -36,5 +36,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/landtoni-common/landtoni-common-vendor.mk)
