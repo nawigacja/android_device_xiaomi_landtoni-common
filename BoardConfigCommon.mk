@@ -9,5 +9,8 @@ include device/xiaomi/msm8937-common/BoardConfigCommon.mk
 
 DEVICE_COMMON_PATH := device/xiaomi/landtoni-common
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_COMMON_PATH)/sepolicy/vendor
+
 # Inherit from the proprietary version
 include vendor/xiaomi/landtoni-common/BoardConfigVendor.mk
