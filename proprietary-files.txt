@@ -1,4 +1,8 @@
 # daisy Package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+# santoni Package version: santoni-user 7.1.2 N2G47H V11.0.2.0.NAMMIXM release-keys
 
 # Charger - from daisy
 vendor/bin/hvdcp_opti
+
+# ConsumerIR - from santoni
+lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so
