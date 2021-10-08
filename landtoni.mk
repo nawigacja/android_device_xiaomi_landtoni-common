@@ -49,5 +49,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
+# ROM: RevengeOS
+ifneq ($(wildcard vendor/revengeos),)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-revengeos
+endif
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/landtoni-common/landtoni-common-vendor.mk)
