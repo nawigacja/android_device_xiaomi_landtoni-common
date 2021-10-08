@@ -49,5 +49,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
+# ROM: CherishOS
+ifneq ($(wildcard vendor/cherish),)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-cherish
+endif # vendor/cherish
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/landtoni-common/landtoni-common-vendor.mk)
