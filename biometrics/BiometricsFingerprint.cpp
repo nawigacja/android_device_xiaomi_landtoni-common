@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_landtoni"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_landtoni"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.2-service.xiaomi_landtoni"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.2-service.xiaomi_landtoni"
 
 #include <android-base/properties.h>
 
@@ -34,14 +34,14 @@ namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V2_2 {
 namespace implementation {
 
 // Supported fingerprint HAL version
 //static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
 
-using RequestStatus =
-        android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
+using RequestStatus = android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
+using FingerprintError = android::hardware::biometrics::fingerprint::V2_1::FingerprintError;
 
 BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
@@ -391,7 +391,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
 }
 
 } // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_2
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
