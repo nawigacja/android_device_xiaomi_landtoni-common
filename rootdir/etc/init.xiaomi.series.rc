@@ -5,6 +5,10 @@ service vendor.goodix_script /vendor/bin/init.goodix.sh
     group system
     oneshot
 
+# HVDCP
+on boot
+    enable vendor.hvdcp_opti
+
 # IR
 on boot
     chown system system /sys/class/leds/infrared/transmit
